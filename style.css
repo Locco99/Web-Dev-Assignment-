@@ -1,0 +1,471 @@
+/* Google Fonts */
+body {
+  font-family: 'DM Sans', 'Dosis', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.main-nav a.active,
+.main-nav a:hover {
+  color: #4f46e5;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.header-btn {
+  margin-left: 2rem;
+}
+.theme-switch-wrapper {
+  margin-left: 1rem;
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.theme-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #ccc;
+  border-radius: 20px;
+  transition: .4s;
+}
+.theme-switch input:checked + .slider {
+  background: #4f46e5;
+}
+.theme-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background: #fff;
+  border-radius: 50%;
+  transition: .4s;
+}
+.theme-switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Banner */
+.banner {
+  background: url('https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/banner1.jpg') center/cover no-repeat;
+  padding: 4rem 0 2rem 0;
+}
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.banner-info {
+  flex: 1 1 350px;
+}
+.banner-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.banner-info h3 {
+  font-size: 1.5rem;
+  color: #4f46e5;
+  min-height: 2.5rem;
+}
+.banner-info p {
+  margin-bottom: 2rem;
+}
+.banner-image {
+  flex: 1 1 300px;
+  text-align: right;
+}
+.banner-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* About */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0 2rem 0;
+}
+.about-image {
+  flex: 1 1 300px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.about-info {
+  flex: 2 1 400px;
+}
+.about-info h6 {
+  color: #4f46e5;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.about-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.my-info {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2rem;
+}
+.my-info div {
+  font-size: 1rem;
+}
+.my-info span {
+  font-weight: 600;
+  color: #4f46e5;
+  margin-right: 0.5rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  list-style: none;
+  padding: 0;
+}
+.social-links a {
+  color: #4f46e5;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.social-links a:hover {
+  color: #222;
+}
+.about-btns {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #222;
+}
+.btn-secondary {
+  background: #fff;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+.btn-secondary:hover {
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* Services */
+.services {
+  background: #fff;
+  padding: 4rem 0 2rem 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #4f46e5;
+  margin-bottom: 2rem;
+}
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-item {
+  background: #f3f4f6;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  flex: 1 1 250px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.service-item i {
+  font-size: 2.5rem;
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+.service-item h5 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Skills */
+.skills {
+  background: #f8f9fa;
+  padding: 4rem 0 2rem 0;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.skills-image {
+  flex: 1 1 300px;
+}
+.skills-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.skills-info {
+  flex: 2 1 400px;
+}
+.skills-info h6 {
+  color: #4f46e5;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.skills-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.progress-group {
+  margin-top: 2rem;
+}
+.progress-info {
+  margin-bottom: 1.2rem;
+}
+.progress-info span {
+  font-weight: 600;
+  color: #222;
+}
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 1rem;
+  height: 12px;
+  width: 100%;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+.progress-fill {
+  background: #4f46e5;
+  height: 100%;
+  border-radius: 1rem;
+  transition: width 1s;
+}
+
+/* Portfolio */
+.portfolio {
+  background: #fff;
+  padding: 4rem 0 2rem 0;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.portfolio-item {
+  position: relative;
+  flex: 1 1 250px;
+  max-width: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.portfolio-item img {
+  width: 100%;
+  display: block;
+  border-radius: 1rem;
+}
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(79,70,229,0.9);
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer-logo a {
+  color: #4f46e5;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-contact li {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: #4f46e5;
+}
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+.footer-copy a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+/* Scroll to Top */
+#movetop {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+#movetop:hover {
+  background: #222;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header-container, .banner-container, .about-container, .skills-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .main-nav.open ul {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+  }
+  .banner-image img, .about-image img, .skills-image img {
+    max-width: 100%;
+  }
+  .portfolio-list, .services-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+} 
